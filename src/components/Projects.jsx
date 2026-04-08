@@ -10,7 +10,7 @@ const LANG_COLORS = {
 };
 
 export default function Projects() {
-  const { repos, kanbanProjects, addKanbanProject, loading, fetchRepos } = useGithub();
+  const { repos, kanbanProjects, addKanbanProject, loading } = useGithub();
   const [search, setSearch] = useState("");
   const [langFilter, setLangFilter] = useState("all");
   const [sortBy, setSortBy] = useState("updated");
@@ -55,7 +55,6 @@ export default function Projects() {
             <h1>Projects</h1>
             <p>Browse and manage your repositories.</p>
           </div>
-          <button className="btn btn-ghost" onClick={fetchRepos}>↻ Refresh</button>
         </div>
       </div>
 
